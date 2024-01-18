@@ -77,6 +77,8 @@ body {
   text-decoration: none;
   display: inline-block;
   margin-bottom: 16px;
+  text-align: center;
+  width: 100%;
 }
 
 .link:hover,
@@ -308,6 +310,7 @@ body {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .values {
@@ -412,12 +415,13 @@ body {
 
 .customer-logo {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 24px;
+  justify-content: center;
+  row-gap: 72px;
+  column-gap: 16px;
 }
 .one-logo {
-  width: calc((100% - 16px) / 2);
+  width: 190px;
   height: 88px;
 }
 
@@ -449,11 +453,14 @@ body {
   letter-spacing: 0.32px;
   color: var(--background-color);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-social {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
 }
 .socials-footer {
   display: flex;
@@ -478,9 +485,7 @@ body {
 .logofill {
   fill: currentColor;
 }
-.footersm {
-  margin-right: 120px;
-}
+
 .footer-icons {
   fill: var(--background-color-second);
 }
@@ -609,12 +614,24 @@ body {
 }
 
 .footer-form {
-  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
 }
 .subscribe-form {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+.subscribe-form .email-label {
+  flex-basis: 100%;
+}
+
+.subscribe-form .email-label .email-form {
+  width: 100%;
+}
+
 .subscribe-label {
   margin-bottom: 16px;
   color: var(--background-color);
@@ -622,6 +639,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 .subscribe-button {
   display: flex;
@@ -814,8 +832,10 @@ body {
 
 .mobile-menu-layout {
   display: flex;
-  width: 100%;
+  max-width: 480px;
+  width: 100vw;
   justify-content: space-between;
+  margin: auto;
 }
 
 .mobile-menu-layout button {
@@ -933,6 +953,12 @@ body {
   .container {
     max-width: 768px;
   }
+  .one-logo {
+    width: 168px;
+  }
+  .customer-logo {
+    column-gap: 24px;
+  }
 }
 
 @media (min-width: 1158px) {
@@ -960,5 +986,31 @@ body {
 
   .people {
     flex-basis: calc((100% - 72px) / 4);
+  }
+  .customer-logo {
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+  }
+  .one-logo {
+    width: calc((100% - 120px) / 6);
+  }
+  .footer-form {
+    margin-left: 80px;
+    display: block;
+  }
+  .footersm {
+    margin-right: 120px;
+  }
+  .socials {
+    text-align: left;
+  }
+
+  .subscribe-label {
+    text-align: left;
+  }
+
+  .footer-social {
+    align-items: baseline;
   }
 }
