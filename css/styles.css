@@ -108,6 +108,7 @@ body {
     ),
     url("../images/people_bg.jpg");
   max-width: 1440px;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -153,7 +154,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--brand-color);
   margin-bottom: 8px;
-  text-align: left;
+  text-align: center;
 }
 
 .header-three-people {
@@ -202,7 +203,8 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: 100%;
+  max-width: 264px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -248,10 +250,12 @@ body {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
+  max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 .header-layout {
   display: flex;
   border-bottom: 1px;
@@ -272,12 +276,12 @@ body {
 .list-layout {
   display: flex;
   gap: 40px;
-  padding: 24px, 0;
+  padding: 24px 0;
 }
 .contact-layout {
   display: flex;
   gap: 40px;
-  padding: 24px, 0;
+  padding: 24px 0;
 }
 
 .menu-layout {
@@ -292,6 +296,7 @@ body {
 
 .section-two {
   padding-bottom: 120px;
+  display: none;
 }
 
 .header-main-layout {
@@ -303,10 +308,11 @@ body {
 .section-one-layout {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .values {
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: 100%;
 }
 
 .section-two-layout {
@@ -317,6 +323,8 @@ body {
 .our-team-layout {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .description {
@@ -374,14 +382,7 @@ body {
 }
 
 .rectangle {
-  background-color: var(--background-color-second);
-  background-size: 264px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px 100px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
 }
 
 .social-media {
@@ -799,4 +800,161 @@ body {
 .send-button:hover,
 .send-button:focus {
   background-color: var(--active-color);
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.menu-layout {
+  display: none;
+}
+
+.mobile-menu-layout {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.mobile-menu-layout button {
+  background-color: transparent;
+}
+
+.js-menu-container {
+  display: none;
+}
+
+.js-menu-container.is-open {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--background-color);
+  flex-flow: column nowrap;
+}
+
+.mobile-nav-layout {
+  margin-left: 40px;
+}
+.mobile-nav-layout .list-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.mobile-nav-layout .list-layout .link-active::after {
+  display: none;
+}
+
+.mobile-nav-layout .list-layout .menu {
+  font-size: 36px;
+  font-weight: 700px;
+  line-height: 40px;
+  letter-spacing: 0.72px;
+}
+
+.mobile-menu-socials {
+  display: flex;
+  gap: 56px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.mobile-contact-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  margin-left: 40px;
+  margin-bottom: 48px;
+}
+
+.mobile-tel {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.72px;
+  color: var(--normal-color);
+}
+
+.mobile-mail {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: var(--text-color);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .header-main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people_bg@2x.jpg");
+  }
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 768px) {
+  .menu-layout {
+    display: flex;
+  }
+  .mobile-menu-layout {
+    display: none;
+  }
+
+  .values {
+    flex-basis: calc((100% - 72px) / 2);
+  }
+
+  .header-three {
+    text-align: left;
+  }
+
+  .section-two {
+    display: none;
+  }
+
+  .people {
+    flex-basis: calc((50% - 24px) / 2);
+  }
+}
+
+@media (min-width: 1158px) {
+  .section-one-layout {
+    flex-wrap: nowrap;
+  }
+  .rectangle {
+    background-color: var(--background-color-second);
+    background-size: 264px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 100px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .values {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .our-team-layout {
+    flex-wrap: nowrap;
+  }
+
+  .people {
+    flex-basis: calc((100% - 72px) / 4);
+  }
 }
