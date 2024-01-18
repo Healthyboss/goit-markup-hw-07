@@ -250,8 +250,7 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 1158px;
+  max-width: 480px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -414,10 +413,11 @@ body {
 .customer-logo {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 24px;
 }
 .one-logo {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
@@ -927,7 +927,11 @@ body {
   }
 
   .people {
-    flex-basis: calc((50% - 24px) / 2);
+    flex-basis: calc(100% - 24px);
+  }
+
+  .container {
+    max-width: 768px;
   }
 }
 
