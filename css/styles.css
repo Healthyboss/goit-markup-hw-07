@@ -119,12 +119,11 @@ body {
 .header-one {
   color: var(--background-color);
   text-align: center;
+  font-size: 36px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  margin-bottom: 48px;
-  max-width: 496px;
+  line-height: 40px;
+  letter-spacing: 0.72px;
+  margin-bottom: 72px;
 }
 .header-hidden {
   overflow: hidden;
@@ -626,6 +625,7 @@ body {
 
 .subscribe-form .email-label {
   flex-basis: 100%;
+  text-align: center;
 }
 
 .subscribe-form .email-label .email-form {
@@ -859,13 +859,14 @@ body {
 }
 
 .mobile-nav-layout {
+  flex-grow: 2;
 }
 
 .mobile-nav-layout .list-layout {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px;
+  gap: 0;
 }
 
 .mobile-nav-layout .list-layout .link-active::after {
@@ -884,7 +885,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .mobile-contact-layout {
@@ -928,6 +928,7 @@ body {
 
 @media (min-width: 768px) {
   .menu-layout {
+    width: 100%;
     display: flex;
   }
   .mobile-menu-layout {
@@ -953,6 +954,7 @@ body {
   .container {
     width: 100%;
     max-width: 768px;
+    justify-content: flex-start;
   }
   .one-logo {
     width: 168px;
@@ -969,6 +971,14 @@ body {
   }
 
   .link-footer {
+    text-align: left;
+  }
+
+  .subscribe-form {
+    flex-wrap: nowrap;
+  }
+
+  .subscribe-label {
     text-align: left;
   }
 }
@@ -1057,5 +1067,14 @@ body {
   }
   .subscribe-form {
     flex-wrap: nowrap;
+  }
+
+  .header-one {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    margin-bottom: 48px;
+    max-width: 496px;
   }
 }
