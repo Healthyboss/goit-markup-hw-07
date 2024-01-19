@@ -954,7 +954,7 @@ body {
   .container {
     width: 100%;
     max-width: 768px;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   .one-logo {
     width: 168px;
@@ -1054,10 +1054,6 @@ body {
   }
   .section-one-layout {
     gap: 24px;
-  }
-
-  .menu-layout {
-    gap: 332px;
   }
 
   .contact-layout {
